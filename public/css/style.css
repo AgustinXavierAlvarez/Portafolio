@@ -4,16 +4,20 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap');
+
 :root{
-    --grisobscuro:rgb(65, 103, 122);
+    --azulobscuro:rgb(28, 56, 72);
+    --grisobscuro:rgb(68, 96, 110);
     --azul:rgb(147, 181, 198);
     --gris:rgb(201, 204, 213);
-    --purpura:#E4D8DC;
-    --rosa:#FFE3E3;
+    --purpura:rgb(228, 216, 220);
+    --rosa:rgb(255, 227, 227);
 }
 
 body{
-    background-color: var(--azul);
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(147, 181, 198,0.8);
 }
 
 /*HEADER*/
@@ -26,6 +30,7 @@ header{
 
 header #titulo{
     text-align: center;
+    margin: 2% 0px;
 }
 
 header #nav-bar{
@@ -119,6 +124,8 @@ nav:hover span:nth-child(4){
 #nav-bar div{
     margin: 4px 0px;
     padding:1vw 2vw;
+    width: 100%;
+    text-align: center;
 }
 
 #nav-bar div:hover{
@@ -126,11 +133,53 @@ nav:hover span:nth-child(4){
 }
 @keyframes links {
     0%{
-        background-color:rgba(201, 204, 213, 1) ;
+        background-color:rgba(255, 227, 227, 0.5)  ;
     }
     100%{
-        background-color:rgba(201, 204, 213, 0.5) ;
+        background-color:rgba(255, 227, 227, 1)
     }
 
 }
 /*HEADER*/
+/*MAIN*/
+main #portafolio{
+    text-align: center;
+}
+#section-welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://w0.peakpx.com/wallpaper/964/948/HD-wallpaper-progamming-code-code-computer-programming-syntax.jpg') ;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+}
+
+#welcome-div{
+    background-color:rgba(147, 181, 198,0.8) ;
+    border-radius: 6px;
+}
+
+#welcome-div h1{
+    font-size: 5vw;
+}
+#welcome-div h3{
+    color: var(--azulobscuro);
+}
+#muestra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#muestra div {
+    margin:2%;
+}
+
+#muestra div iframe{
+    border-radius: 6px;
+}
+/*MAIN*/
