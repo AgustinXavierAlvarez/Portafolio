@@ -17,7 +17,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(147, 181, 198,0.8);
+    background-color: rgb(147, 181, 198);
 }
 
 /*HEADER*/
@@ -33,12 +33,12 @@ header #titulo{
     margin: 2% 0px;
 }
 
-header #nav-bar{
+header #navbar{
     display: flex;
     justify-content:space-evenly;
 }
 /* Efecto De La Barra De Navegacion */
-header nav{
+header #menu{
     overflow: hidden;
 }
 
@@ -121,14 +121,14 @@ nav:hover span:nth-child(4){
     }
 }
 /* Efecto De La Barra De Navegacion*/
-#nav-bar div{
+#navbar div{
     margin: 4px 0px;
     padding:1vw 2vw;
     width: 100%;
     text-align: center;
 }
 
-#nav-bar div:hover{
+#navbar div:hover{
     animation:links 1s forwards;
 }
 @keyframes links {
@@ -142,9 +142,6 @@ nav:hover span:nth-child(4){
 }
 /*HEADER*/
 /*MAIN*/
-main #portafolio{
-    text-align: center;
-}
 #section-welcome{
     display: flex;
     flex-direction: column;
@@ -169,17 +166,33 @@ main #portafolio{
 #welcome-div h3{
     color: var(--azulobscuro);
 }
+main #portafolio{
+    text-align: center;
+    
+}
+
 #muestra{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 4vw 0px;
 }
 
-#muestra div {
-    margin:2%;
+#muestra img{
+   max-width: 400px;
+   min-height: 330px;
 }
 
-#muestra div iframe{
-    border-radius: 6px;
+.articulo{
+    padding:0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grisobscuro);
+}
+ 
+ .articulo h2{
+    padding:2vw 0px ;
 }
 /*MAIN*/
