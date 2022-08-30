@@ -8,15 +8,16 @@
 
 :root{
     --azulobscuro:rgb(28, 56, 72);
-    --grisobscuro:rgb(68, 96, 110);
+    --grisobscuro:rgb(131, 76, 122);
     --azul:rgb(147, 181, 198);
+    --celeste:rgb(49, 157, 160);
     --gris:rgb(201, 204, 213);
     --purpura:rgb(228, 216, 220);
     --rosa:rgb(255, 227, 227);
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     background-color: rgb(147, 181, 198);
 }
 
@@ -30,105 +31,59 @@ header{
 
 header #titulo{
     text-align: center;
+    height: 6vw;
     margin: 2% 0px;
 }
+/*Efecto Titulo*/
+#titulo h1{
+    position: absolute;
+    font-size:5rem;
+    color: var(--grisobscuro);
+    -webkit-text-stroke:0.1vw #383d52;
+    left: 31%;
+    
+}
 
-header #navbar{
+#titulo h1::before{
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0%;
+    height: 100%;
+    color:var(--rosa);
+    -webkit-text-stroke:0vw #383d52;
+    border-right: 2px solid var(--rosa);
+    overflow: hidden;
+    animation:animation-title 5s linear infinite ;
+    -webkit-animation: animation-title 5s linear infinite;
+}
+@keyframes animation-title {
+    0%{
+        width:0%;
+    }
+    70%{
+        width: 100%;
+    }
+}
+/*Efecto Titulo*/
+header #navbar ul{
     display: flex;
     justify-content:space-evenly;
 }
-/* Efecto De La Barra De Navegacion */
-header #menu{
-    overflow: hidden;
-}
 
-nav:nth-child(1){
-    filter: hue-rotate(270deg);
-}
-nav:nth-child(2){
-    filter: hue-rotate(110deg);
-}
-nav span{
-    position: absolute;
-    display: block;
-}
-nav:hover span:nth-child(1){
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg,transparent,var(--rosa));
-    animation: animate1 1s linear infinite;
-}
-@keyframes animate1{
-    0%{
-        left: -100%;
-    }
-    50%,100%{
-        left: 100%;
-    }
-}
-nav:hover  span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,var(--rosa));
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-@keyframes animate2{
-    0%{
-        top: -100%;
-    }
-    50%,100%{
-        top: 100%;
-    }
-}
-nav:hover span:nth-child(3){
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(270deg,transparent,var(--rosa));
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.5s;
-}
-@keyframes animate3{
-    0%{
-        right: -100%;
-    }
-    50%,100%{
-        right: 100%;
-    }
-}
-
-nav:hover span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,var(--rosa));
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-@keyframes animate4{
-    0%{
-        bottom: -100%;
-    }
-    50%,100%{
-        bottom: 100%;
-    }
-}
-/* Efecto De La Barra De Navegacion*/
-#navbar div{
+#navbar li{
     margin: 4px 0px;
     padding:1vw 2vw;
     width: 100%;
     text-align: center;
 }
 
-#navbar div:hover{
+#navbar a{
+    width: 100%;
+}
+
+#navbar li:hover{
     animation:links 1s forwards;
 }
 @keyframes links {
@@ -140,6 +95,36 @@ nav:hover span:nth-child(4){
     }
 
 }
+/*Efecto NavBar*/
+.nav-link{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color:var(--celeste);
+}
+.nav-link::after,.nav-link::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--celeste);
+    transform: scale(0);
+    transition: transform .25s;
+}
+.nav-link::before{
+    top: -3px;
+    transform-origin: left;
+}
+.nav-link::after{
+    bottom: -3px;
+    transform-origin: right;
+}
+.nav-link:hover::after,.nav-link:hover::before{
+    transform: scale(1);
+}
+/*Efecto NavBar*/
+
 /*HEADER*/
 /*MAIN*/
 #section-welcome{
