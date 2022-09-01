@@ -5,6 +5,8 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
+app.set('views',__dirname + '/src/views')
+
 app.listen (3040, () => { 
     console.log ('Servidor corriendo')
 });
