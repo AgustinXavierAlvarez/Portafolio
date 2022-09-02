@@ -10,76 +10,77 @@
     <script src="https://kit.fontawesome.com/7a0a501500.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav id="navbar">
+        <nav id="menu">
+            <ul type="none">
+                <a type="none" href="#welcome-section"><li class="nav-link">Presentacion</li></a>
+                <a type="none" href="#projects"><li class="nav-link">Proyectos</li></a>
+                <a type="none" href="#section-redes"><li class="nav-link">Redes</li></a>
+            </ul>
+        </nav>
+    </nav>
     <header>
         <div id="titulo">
             <h1 data-text="PORTAFOLIO">PORTAFOLIO</h1>
         </div>
-        <nav id="menu">
-            <nav id="navbar">
-                <ul type="none">
-                    <a type="none" href="#section-welcome"><li class="nav-link">Presentacion</li></a>
-                    <a type="none" href="#portafolio"><li class="nav-link">Proyectos</li></a>
-                    <a type="none" href="#section-redes"><li class="nav-link">Redes</li></a>
-                </ul>
-            </nav>
-        </nav>
     </header>
     <main>
-        <section id="section-welcome">
-            <div id="welcome-div">
+        <section id="welcome-section">
+            <div id="me">
                 <h1>Hola soy Agustin</h1>
                 <h3 >Trainee Full Stack Developer React js.</h3>
             </div>  
         </section>
-        <section id="seccion-proyectos">
-            <div id="portafolio">
-                <h1 class="title">Algunos de mis Proyectos</h1>
+        <section id="projects">
+            <div id="select-projects">
+                <h1 class="project-tile">Algunos de mis Proyectos</h1>
             </div>
             <section id="muestra">
                 <div class="proyectos">
-                    <article class="articulo">
-                        <img src="/images/Destino_del_prod_FCC.png" alt="Proyecto Nº03"/>
-                        <h2>Destino del Producto</h2>
-                    </article>
+                    <a type="none" href="https://codepen.io/agustinxalv1/pen/qBoMRdr" target="_blank">
+                        <article class="articulo">
+                            <img src="/images/Destino_del_prod_FCC.png" alt="Proyecto Nº03"/>
+                            <h2>Destino del Producto</h2>
+                        </article>
+                    </a>
                 </div>
                 <div class="proyectos">
-                    <article class="articulo">
-                        <img src="/images/Formulario_FCC.png" alt="Proyecto Nº02">
-                        <h2>Formulario</h2>
-                    </article>
+                    <a type="none" href="https://codepen.io/agustinxalv1/pen/poaveVw" target="_blank">
+                        <article class="articulo">
+                            <img src="/images/Formulario_FCC.png" alt="Proyecto Nº02">
+                            <h2>Formulario</h2>
+                        </article>
+                    </a>
                 </div>
                 <div class="proyectos">
-                    <article class="articulo">
-                        <img src="/images/Detalle_tecnico_FCC.png" alt="Proyecto Nº04">
-                        <h2>Detalle Tecnico</h2>
-                    </article>
+                    <a type="none" href="http://codepen.io/agustinxalv1/pen/zYWJNxq" target="_blank" >
+                        <article class="articulo">
+                            <img src="/images/Detalle_tecnico_FCC.png" alt="Proyecto Nº04">
+                            <h2>Detalle Tecnico</h2>
+                        </article>
+                    </a>
                 </div>
             </section>
         </section>
         <section id="section-redes">
-            <div>
-                <h2 class="title">Sobre mi</h2>
-            </div>
-            <div>
-                <h2>Estudios</h2>
-                <h4>Ex-Estudiante del Colegio Saleciano San Jose</h4>
-                <p>Recibido con titulo de Tecnico Electronico</p>
-                <h4>Estudiante de Ingenieria en sistemas de Informacion en la Universidad Tecnologica Nacional</h4>
-                <p>Acualmente cusando 2do año</p>
-                <h4>Estudiante de Digital House</h4>
-                <p>Actualmente cursando, complete 87% del curso actualmente</p>
-            </div>
-            
             <section  class="box">
-                <div class="title">
+                <div class="project-tile">
                     <h1>Redes</h1>
                 </div>
                 <div id="redes">
-                    <a href="" class="red text"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="" class="red text"><i class="fa-brands fa-github"></i></a>
-                    <a href="" class="red text"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="" class="red text"><i class="fa-solid fa-at"></i></a>
+                    <a href="" id="profile-link" class="red text" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="" class="red text" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="" class="red text" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="red text" target="_blank"><i class="fa-solid fa-at"></i></a>
                 </div>
+            </section>
+            <section>
+                <div>
+                    
+                </div>
+                <form action="">
+                    
+                </form>
             </section>
         </section>
     </main>
