@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="<%= style %>">
     <link rel= "stylesheet" type= "text/css" herf= "https://fonts.google.com/specimen/Comfortaa">
     <script src="https://kit.fontawesome.com/7a0a501500.js" crossorigin="anonymous"></script>
 </head>
@@ -36,30 +36,17 @@
                 <h1 class="project-tile">Algunos de mis Proyectos</h1>
             </div>
             <section id="muestra">
+                <% data.forEach(function(element){ %>
                 <div class="proyectos">
-                    <a type="none" href="https://codepen.io/agustinxalv1/pen/qBoMRdr" target="_blank">
+                    <a type="none" href="<%= element.url %>" target="_blank">
                         <article class="articulo">
-                            <img src="/images/Destino_del_prod_FCC.png" alt="Proyecto Nº03"/>
-                            <h2>Destino del Producto</h2>
+                            <img src="<%= element.img %>" alt="Proyecto Nº03"/>
+                            <h2><%= element.name %></h2>
                         </article>
                     </a>
                 </div>
-                <div class="proyectos">
-                    <a type="none" href="https://codepen.io/agustinxalv1/pen/poaveVw" target="_blank">
-                        <article class="articulo">
-                            <img src="/images/Formulario_FCC.png" alt="Proyecto Nº02">
-                            <h2>Formulario</h2>
-                        </article>
-                    </a>
-                </div>
-                <div class="proyectos">
-                    <a type="none" href="http://codepen.io/agustinxalv1/pen/zYWJNxq" target="_blank" >
-                        <article class="articulo">
-                            <img src="/images/Detalle_tecnico_FCC.png" alt="Proyecto Nº04">
-                            <h2>Detalle Tecnico</h2>
-                        </article>
-                    </a>
-                </div>
+                <% }) %>
+                
             </section>
         </section>
         <section id="section-redes">

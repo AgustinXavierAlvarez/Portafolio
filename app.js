@@ -1,7 +1,9 @@
 const express=require('express');
 const app=express();
+const ruteIndex= require('./src/rutes/index')
 
 app.use(express.static('public'));
+app.use(express.json())
 
 app.set('view engine', 'ejs');
 
@@ -11,6 +13,4 @@ app.listen (3040, () => {
     console.log ('Servidor corriendo')
 });
 
-app.get('/',(req,res)=>{
-    res.render('index');
-})
+app.get('/', ruteIndex)
