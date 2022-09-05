@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: rgb(170, 163, 152);
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #333333;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(228, 220, 207,0.5);
+    border: 0px none #ffffff;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--celeste);
+    border: 0px none #ffffff;
+    border-radius: 5px;
+  }
+
+/*HEADER*/
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grisobscuro);
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 5%;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+#titulo{
+    margin-top: 0%;
+}
+/*Efecto Titulo*/
+#titulo h1{
+    position: relative;
+    font-size: 5rem;
+    color: var(--grisobscuro);
+    -webkit-text-stroke: 0.1vw #383d52;
+    
+}
+
+#titulo h1::before{
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0%;
+    height: 100%;
+    color:var(--rosa);
+    -webkit-text-stroke:0vw #383d52;
+    border-right: 2px solid var(--rosa);
+    overflow: hidden;
+    animation:animation-title 5s linear infinite ;
+    -webkit-animation: animation-title 5s linear infinite;
+}
+@keyframes animation-title {
+    0%{
+        width:0%;
+    }
+    70%{
+        width: 100%;
+    }
+}
+/*Efecto Titulo*/
+#menu ul{
+    display: flex;
+    justify-content:space-evenly;
+    background-color: var(--grisobscuro);
+}
+
+#menu li{
+    margin: 4px 0px;
+    padding:1vw 2vw;
+    width: 100%;
+    text-align: center;
+}
+
+#menu a{
+    width: 100%;
+}
+
+#menu li:hover{
+    animation:links 1s forwards;
+}
+@keyframes links {
+    0%{
+        background-color:rgba(255, 227, 227, 0.5)  ;
+    }
+    100%{
+        background-color:rgba(255, 227, 227, 1);
+        color:black;
+    }
+
+}
+/*Efecto NavBar*/
+.nav-link{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color:var(--celeste);
+}
+.nav-link::after,.nav-link::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--celeste);
+    transform: scale(0);
+    transition: transform .5s;
+}
+.nav-link::before{
+    top: -3px;
+    transform-origin: left;
+}
+.nav-link::after{
+    bottom: -3px;
+    transform-origin: right;
+}
+.nav-link:hover::after,.nav-link:hover::before{
+    transform: scale(1);
+}
+/*Efecto NavBar*/
+
+/*HEADER*/
+

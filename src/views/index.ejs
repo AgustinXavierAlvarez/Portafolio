@@ -1,29 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="<%= style %>">
-    <link rel= "stylesheet" type= "text/css" herf= "https://fonts.google.com/specimen/Comfortaa">
-    <script src="https://kit.fontawesome.com/7a0a501500.js" crossorigin="anonymous"></script>
-</head>
+<%- include('partials/head')%>
 <body>
-    <nav id="navbar">
-        <nav id="menu">
-            <ul type="none">
-                <a type="none" href="#welcome-section"><li class="nav-link">Presentacion</li></a>
-                <a type="none" href="#projects"><li class="nav-link">Proyectos</li></a>
-                <a type="none" href="#section-redes"><li class="nav-link">Redes</li></a>
-            </ul>
-        </nav>
-    </nav>
-    <header>
-        <div id="titulo">
-            <h1 data-text="PORTAFOLIO">PORTAFOLIO</h1>
-        </div>
-    </header>
+    <%- include('partials/header')%>
     <main>
         <section id="welcome-section">
             <div id="me">
@@ -71,8 +50,5 @@
             </section>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>
